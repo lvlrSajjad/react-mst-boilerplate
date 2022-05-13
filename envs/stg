@@ -1,0 +1,9 @@
+/**
+ TEST_USERNAME1 = "sp-admin@test.com"
+ TEST_PASSWORD1 = "P@ssw0rd!"
+ TEST_EMAILS="tmakota@ecotrak.com, sp-tech@test.com, sp-admin@test.com"
+*/
+
+export const BASE_URL_ECOTRACK = "https://api.ecotrak.com/stagev1/"
+
+export const BUILD_ENV = "STG"
