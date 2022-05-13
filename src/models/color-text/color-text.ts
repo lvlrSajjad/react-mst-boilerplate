@@ -17,4 +17,3 @@ type ColorTextType = Instance<typeof ColorTextModel>
 export interface ColorText extends ColorTextType {}
 type ColorTextSnapshotType = SnapshotOut<typeof ColorTextModel>
 export interface ColorTextSnapshot extends ColorTextSnapshotType {}
-export const createColorTextDefaultModel = () => types.optional(ColorTextModel, {})

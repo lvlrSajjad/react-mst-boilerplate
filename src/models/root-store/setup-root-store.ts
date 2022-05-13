@@ -48,11 +48,6 @@ export async function setupRootStore() {
     })
   }
 
-  // reactotron logging
-  if (__DEV__) {
-    env.reactotron.setRootStore(rootStore, data)
-  }
-
   // track changes & save to storage
   onSnapshot(rootStore, (snapshot) => storage.save(ROOT_STATE_STORAGE_KEY, snapshot))
 

@@ -10,7 +10,6 @@
  * if you're interested in adding screens and navigators.
  */
 import "./localization"
-import "./utils/ignore-warnings"
 import {useState, useEffect} from "react"
 import {initFonts} from "./theme/fonts" // expo
 import {AppNavigator} from "./navigators"

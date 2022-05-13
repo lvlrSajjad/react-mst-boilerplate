@@ -1,4 +1,3 @@
-import AsyncStorage from "@react-native-async-storage/async-storage"
 import {hasValue} from "../empty-check";
 
 /**
@@ -8,7 +7,7 @@ import {hasValue} from "../empty-check";
  */
 export async function loadString(key: string): Promise<string | null> {
   try {
-    return await AsyncStorage.getItem(key)
+    return await localStorage.getItem(key)
   } catch {
     // not sure why this would fail... even reading the RN docs I'm unclear
     return null
@@ -23,7 +22,7 @@ export async function loadString(key: string): Promise<string | null> {
  */
 export async function saveString(key: string, value: string): Promise<boolean> {
   try {
-    await AsyncStorage.setItem(key, value)
+    await localStorage.setItem(key, value)
     return true
   } catch {
     return false
@@ -37,8 +36,8 @@ export async function saveString(key: string, value: string): Promise<boolean> {
  */
 export async function load(key: string): Promise<any | null> {
   try {
-    const almostThere = await AsyncStorage.getItem(key)
-    if(hasValue(almostThere)) {
+    const almostThere = await localStorage.getItem(key)
+    if(hasValue(almostThere) && typeof(almostThere) === "string") {
       return JSON.parse(almostThere)
     } else {
       return null
@@ -56,7 +55,7 @@ export async function load(key: string): Promise<any | null> {
  */
 export async function save(key: string, value: any): Promise<boolean> {
   try {
-    await AsyncStorage.setItem(key, JSON.stringify(value))
+    await localStorage.setItem(key, JSON.stringify(value))
     return true
   } catch {
     return false
@@ -70,7 +69,7 @@ export async function save(key: string, value: any): Promise<boolean> {
  */
 export async function remove(key: string): Promise<void> {
   try {
-    await AsyncStorage.removeItem(key)
+    await localStorage.removeItem(key)
   } catch {}
 }
 
@@ -79,6 +78,6 @@ export async function remove(key: string): Promise<void> {
  */
 export async function clear(): Promise<void> {
   try {
-    await AsyncStorage.clear()
+    await localStorage.clear()
   } catch {}
 }

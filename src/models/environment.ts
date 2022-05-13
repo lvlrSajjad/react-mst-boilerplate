@@ -12,17 +12,15 @@ export class Environment {
 
   async setup() {
     // allow each service to setup
-    await this.api.setup(null)
+    await this.api.setup()
   }
 
   async addAuth(token: string) {
     await this.api.setup(token)
-    await this.uploadApi.uploadSetup(token)
   }
 
   async removeAuth() {
-    await this.api.setup(null)
-    await this.uploadApi.uploadSetup(null)
+    await this.api.setup()
   }
 
 
@@ -30,17 +28,5 @@ export class Environment {
    * Our api.
    */
   api: Api
-
-  /**
-   * Our api.
-   */
-  noAuth: Api
-
-  /**
-   * Our api.
-   */
-  uploadApi: Api
-
-  utilApi: Api
 
 }

@@ -1,6 +1,5 @@
 import { hasValue } from "../utils/empty-check"
 import { ColorSet } from "../models/color-set/color-set"
-import {setUserColorScheme} from "../utils/firebase/analytics";
 
 export const primary = {
   50: "#E0EEF9",
@@ -98,8 +97,7 @@ export const colorDark: ColorSet = {
 export let colorScheme = "light"
 export let preferredColor: ColorSet = colorLight
 
-export function setColorScheme(scheme) {
-  setUserColorScheme(scheme)
+export function setColorScheme(scheme: string) {
   if (hasValue(scheme)) {
     if(colorScheme !== scheme ) {
       colorScheme = scheme

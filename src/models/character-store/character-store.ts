@@ -25,7 +25,7 @@ export const CharacterStoreModel = types
       if (result.kind === "ok") {
         self.saveCharacters(result.characters)
       } else {
-        __DEV__ && console.tron.log(result.kind)
+        console.log(result.kind)
       }
     },
   }))

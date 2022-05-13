@@ -56,7 +56,7 @@ export const logInfo = ({
   /// Send error to bug tracker
 }
 
-export function makeId(length) {
+export function makeId(length: number) {
   let result = '';
   const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
   const charactersLength = characters.length;

@@ -18,4 +18,3 @@ type LocationType = Instance<typeof LocationModel>
 export interface ColorPalette extends LocationType {}
 type LocationSnapshotType = SnapshotOut<typeof LocationModel>
 export interface LocationSnapshot extends LocationSnapshotType {}
-export const createLocationDefaultModel = () => types.optional(LocationModel, {})

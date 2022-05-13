@@ -28,8 +28,8 @@ function setEnvironment() {
       if (err) {
          console.log(err);
       }
-      fs.mkdir('./app/config/', () => {
-         fs.writeFile('./app/config/env.ts', buf, (err) => {
+      fs.mkdir('./src/config/', () => {
+         fs.writeFile('./src/config/env.ts', buf, (err) => {
             if (err) {
                console.log(err);
                process.exit(1);

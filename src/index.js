@@ -10,7 +10,7 @@
 import * as React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom"
-import App from "./src/app.tsx"
+import App from "./app.tsx"
 
 const root = ReactDOM.createRoot(
     document.getElementById("root")

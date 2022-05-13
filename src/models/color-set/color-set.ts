@@ -32,4 +32,3 @@ type ColorSetType = Instance<typeof ColorSetModel>
 export interface ColorSet extends ColorSetType {}
 type ColorSetSnapshotType = SnapshotOut<typeof ColorSetModel>
 export interface ColorSetSnapshot extends ColorSetSnapshotType {}
-export const createColorSetDefaultModel = () => types.optional(ColorSetModel, {})

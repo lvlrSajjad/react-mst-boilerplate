@@ -24,4 +24,3 @@ type ColorPaletteType = Instance<typeof ColorPaletteModel>
 export interface ColorPalette extends ColorPaletteType {}
 type ColorPaletteSnapshotType = SnapshotOut<typeof ColorPaletteModel>
 export interface ColorPaletteSnapshot extends ColorPaletteSnapshotType {}
-export const createColorPaletteDefaultModel = () => types.optional(ColorPaletteModel, {})

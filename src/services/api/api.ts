@@ -8,6 +8,7 @@ export class Api {
   /**
    * The underlying apisauce instance which performs the requests.
    */
+  // @ts-ignore
   apisauce: ApisauceInstance
 
   /**
@@ -31,7 +32,7 @@ export class Api {
    *
    * Be as quick as possible in here.
    */
-  setup(token: string) {
+  setup(token?: string) {
 
     const baseConfigHeaders = {
       Accept: "*/*",
